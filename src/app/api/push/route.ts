@@ -7,8 +7,12 @@ webPush.setVapidDetails("mailto:web-push@example.com", publicKey, privateKey);
 
 export async function POST(request: Request) {
   const { message, delaySec, ...sub }: IWebPushData = await request.json();
-  setTimeout(() => {
-    webPush.sendNotification(sub, message);
-  }, delaySec * 1000);
+  await new Promise<void>((resolve) => {
+    setTimeout(async () => {
+      const result = await webPush.sendNotification(sub, message);
+      console.log(result);
+      resolve();
+    }, delaySec * 1000);
+  });
   return Response.json({ ok: true });
 }
