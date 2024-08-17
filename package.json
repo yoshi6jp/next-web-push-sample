@@ -6,21 +6,29 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vapid-keys:gen": "web-push generate-vapid-keys"
   },
   "dependencies": {
+    "@swc-jotai/debug-label": "^0.1.1",
+    "@swc-jotai/react-refresh": "^0.1.1",
+    "@types/web-push": "^3.6.3",
+    "daisyui": "^4.12.10",
+    "jotai": "^2.9.3",
+    "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.5"
+    "rsc-daisyui": "^1.0.3",
+    "web-push": "^3.6.7"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5"
+    "typescript": "^5"
   }
 }
